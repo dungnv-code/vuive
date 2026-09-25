@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battle City — Bắn Xe Tăng 90</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <div id="hud-top">
+    <div class="hud-block">
+      <div class="hud-label">ĐỊCH</div>
+      <div id="enemy-icons"></div>
+    </div>
+    <div class="hud-block center">
+      <div class="hud-label">ĐIỂM</div>
+      <div id="score" class="hud-value">0</div>
+    </div>
+    <div class="hud-block right">
+      <div class="hud-label">MÀN</div>
+      <div id="stage" class="hud-value">1</div>
+    </div>
+  </div>
+
+  <div id="stage-area">
+    <canvas id="game" width="416" height="416"></canvas>
+    <div id="overlay">
+      <div id="overlay-title">BATTLE CITY</div>
+      <div id="overlay-sub">BẮN XE TĂNG 90</div>
+      <div id="overlay-msg">NHẤN ENTER ĐỂ BẮT ĐẦU</div>
+      <div id="overlay-controls">
+        P1: Mũi tên / WASD — di chuyển · Space — bắn<br>
+        P2: I / J / K / L — di chuyển · F — bắn · P — tạm dừng · M — âm thanh
+      </div>
+    </div>
+  </div>
+
+  <div id="hud-bottom">
+    <div class="hud-block">
+      <div class="hud-label">MẠNG</div>
+      <div id="lives" class="hud-value">2</div>
+    </div>
+    <div class="hud-block">
+      <div class="hud-label">CỜ</div>
+      <div id="flag" class="hud-value">I</div>
+    </div>
+  </div>
+</div>
+<script src="levels.js"></script>
+<script src="textures.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

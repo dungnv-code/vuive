@@ -1,0 +1,116 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html, body {
+  height:100%;
+  background:#0d0d0d;
+  color:#e8e8e8;
+  font-family:'Courier New', Courier, monospace;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+#wrap {
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  align-items:stretch;
+}
+
+#hud-top, #hud-bottom {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  width:416px;
+  margin:0 auto;
+}
+
+.hud-block { text-align:center; }
+.hud-block.center { flex:1; }
+.hud-block.right { text-align:right; }
+
+.hud-label {
+  font-size:11px;
+  letter-spacing:2px;
+  color:#9a9a9a;
+  margin-bottom:2px;
+}
+
+.hud-value {
+  font-size:20px;
+  font-weight:bold;
+  color:#fff;
+}
+
+#enemy-icons {
+  display:flex;
+  flex-wrap:wrap;
+  width:56px;
+  max-height:56px;
+  gap:1px;
+}
+
+#enemy-icons .e {
+  width:9px; height:9px;
+  background:#e44;
+  clip-path:polygon(0 40%, 25% 40%, 25% 10%, 75% 10%, 75% 40%, 100% 40%, 100% 75%, 75% 75%, 75% 100%, 25% 100%, 25% 75%, 0 75%);
+}
+
+#stage-area { position:relative; width:416px; height:416px; margin:0 auto; }
+
+canvas {
+  display:block;
+  width:416px; height:416px;
+  image-rendering:pixelated;
+  image-rendering:crisp-edges;
+  border:2px solid #636363;
+  background:#000;
+}
+
+#overlay {
+  position:absolute;
+  inset:0;
+  background:rgba(8,8,8,0.92);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  text-align:center;
+  z-index:5;
+}
+
+#overlay.hidden { display:none; }
+
+#overlay-title {
+  font-size:44px;
+  font-weight:bold;
+  letter-spacing:4px;
+  color:#e8b430;
+  text-shadow:3px 3px 0 #7a4a00;
+}
+
+#overlay-sub {
+  font-size:14px;
+  letter-spacing:3px;
+  color:#c0c0c0;
+}
+
+#overlay-msg {
+  font-size:15px;
+  color:#fff;
+  margin-top:10px;
+  animation:blink 1s steps(2, start) infinite;
+}
+
+#overlay-controls {
+  font-size:11px;
+  line-height:1.8;
+  color:#8a8a8a;
+}
+
+#overlay-score { font-size:22px; color:#fff; }
+#overlay-score .row { margin:4px 0; }
+
+@keyframes blink { 50% { opacity:0; } }

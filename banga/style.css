@@ -1,0 +1,15 @@
+/* ===== Chicken Invaders VN — giao diện ===== */
+html,body{margin:0;padding:0;background:#050510;height:100%;overflow:hidden;font-family:'Segoe UI',Arial,sans-serif;user-select:none}
+#wrap{position:relative;width:900px;height:650px;margin:0 auto;top:50%;transform:translateY(-50%);
+  box-shadow:0 0 60px rgba(80,120,255,.35);border-radius:10px;overflow:hidden;background:#000}
+canvas{display:block;background:#000}
+#overlay{position:absolute;inset:0;background:rgba(5,8,25,.88);color:#fff;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;z-index:10}
+#overlay.hidden{display:none}
+h1{margin:0 0 8px;font-size:40px;color:#ffd23e;text-shadow:0 0 18px #ff8800;letter-spacing:2px}
+h2{margin:4px 0 14px;font-size:20px;color:#9fd0ff;font-weight:400}
+.btn{margin:6px;padding:12px 34px;font-size:20px;border:none;border-radius:8px;cursor:pointer;
+  background:linear-gradient(#ffcf40,#ff8800);color:#3a1e00;font-weight:bold;box-shadow:0 4px 14px rgba(255,150,0,.4)}
+.btn:hover{filter:brightness(1.15)}
+.small{font-size:13px;color:#8899bb;margin-top:16px;line-height:1.7}
+kbd{background:#1c2748;border:1px solid #3a4a7a;border-radius:4px;padding:1px 7px;font-family:inherit}

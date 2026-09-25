@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WOLFENSTEIN 3D — HTML5 Remake</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <div id="gamebox">
+    <canvas id="screen" width="640" height="400"></canvas>
+
+    <!-- Màn hình tiêu đề -->
+    <div id="title-screen" class="overlay">
+      <div class="wolf-logo">
+        <div class="wolf-title">WOLFENSTEIN</div>
+        <div class="wolf-sub">3D</div>
+        <div class="wolf-german">FLUCHT AUS WOLFENSTEIN</div>
+      </div>
+      <div class="menu">
+        <button id="btn-start" class="menu-btn">► VÀO TRẬN (ENTER)</button>
+        <div class="menu-info">
+          <p><b>Di chuyển:</b> W A S D &nbsp;|&nbsp; <b>Quay:</b> ← → hoặc chuột</p>
+          <p><b>Bắn:</b> Chuột &nbsp;|&nbsp; <b>Chọn vũ khí:</b> phím 1–8 &nbsp;|&nbsp; <b>Ngắm zoom (súng tỉa):</b> giữ chuột phải</p>
+          <p><b>Nhảy:</b> Space (lên được hòm/ngại vật thấp) &nbsp;|&nbsp; <b>Ngắm lên/xuống:</b> kéo chuột dọc &nbsp;|&nbsp; <b>Mở cửa / đẩy tường:</b> E &nbsp;|&nbsp; <b>Chạy:</b> Shift</p>
+          <p><b>Nhắm trúng ĐẦU đối phương = sát thương x2</b> — ngước góc nhìn cho đầu địch vào tâm bắn</p>
+          <p><b>Kho vũ khí:</b> 1. SÚNG TRƯỜNG (M416/AKM/Beryl M762/Groza) &nbsp;•&nbsp; 2. BẮN TỈA (Kar98k/M24/AWM) &nbsp;•&nbsp; 3. THIỆN XẠ (Mini 14/SLR/Mk14 EBR)</p>
+          <p>&nbsp;&nbsp;&nbsp;4. TIỂU LIÊN (UMP45/Micro UZI/Vector) &nbsp;•&nbsp; 5. SHOTGUN (S686/S12K/DBS) &nbsp;•&nbsp; 6. SÚNG MÁY (DP-28/M249) &nbsp;•&nbsp; 7. SÚNG LỤC (P92/P18C/Desert Eagle)</p>
+          <p>&nbsp;&nbsp;&nbsp;8. SÚNG PHÓNG LỰU (GP-25/M79) — bắn đạn nổ theo quỹ đạo, nổ lan khi trúng đích</p>
+          <p><b>Nhấn lại số đã chọn để đổi dòng súng</b> trong cùng nhóm — mỗi loại có độ giật, tầm bắn và độ chính xác riêng</p>
+          <p><b>Nhiệm vụ:</b> diệt hết đội boss tự động — đồng đội AI bắn trợ chiến &amp; tự hồi sinh</p>
+          <p><b>Boss đối phương:</b> di chuyển né ngang linh hoạt, biết nhảy lên hòm — quan sát chúng từ <b>bản đồ thu nhỏ góc trái</b> (hình thoi vàng)</p>
+          <p><b>Đạn: vô hạn</b> &nbsp;|&nbsp; Màu team: <span style="color:#45ff7a">▲ XANH</span> = đồng đội, <span style="color:#ff4a4a">▲ ĐỎ</span> = đối phương</p>
+        </div>
+      </div>
+      <div class="title-footer">id Software 1992 • Fan remake thuần HTML/CSS/JS</div>
+    </div>
+
+    <!-- Màn hình kết thúc / thắng thua -->
+    <div id="end-screen" class="overlay" style="display:none">
+      <div id="end-title" class="end-title">GAME OVER</div>
+      <div id="end-stats" class="end-stats"></div>
+      <button id="btn-restart" class="menu-btn">► CHƠI LẠI (ENTER)</button>
+    </div>
+  </div>
+</div>
+
+<script src="textures.js"></script>
+<script src="levels.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
